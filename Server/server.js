@@ -15,4 +15,6 @@ mongoose.connect('mongodb+srv://ngocphule:DwNdZLvZ2nj8PKX6@appraovat.bnwjkr6.mon
     }
 });
 
+//body-parser
 require("./routes/fileManager")(app);
+require("./routes/account")(app);
