@@ -1,4 +1,4 @@
-name: Go
+name: Cloc
 
 on:
   push:
@@ -7,19 +7,19 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
     - name: Set up Go
       uses: actions/setup-go@v3
       with:
         go-version: 1.18
 
-    - name: Build
+    - name: Install SCC
       run: go install github.com/boyter/scc@latest
 
-    - name: Count
-      run: scc --not-match "ler.swift" -f csv -o output.csv
+    - name: Count lines of code
+      run: scc --not-match "ler.swift"
