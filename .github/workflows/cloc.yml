@@ -22,4 +22,4 @@ jobs:
       run: go install github.com/boyter/scc@latest
 
     - name: Count lines of code
-      run: scc --no-cocomo -c -i swift
+      run: scc --no-cocomo -c -i dart
