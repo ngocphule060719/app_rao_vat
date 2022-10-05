@@ -22,4 +22,4 @@ jobs:
       run: go install github.com/boyter/scc@latest
 
     - name: Count lines of code
-      run: scc --not-match ["ler.swift","te.swift"]
+      run: scc -i swift --not-match ["te.swift"]
