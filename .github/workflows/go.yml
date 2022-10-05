@@ -22,4 +22,4 @@ jobs:
       run: go install github.com/boyter/scc@latest
 
     - name: Count
-      run: scc --not-match ".g.dart" -v
+      run: scc --not-match ".g.dart"
